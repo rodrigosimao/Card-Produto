@@ -1,0 +1,140 @@
+:root {
+  --background: #f2ebe3;
+  --bg-card: #ffffff;
+  --text: #6c7289;
+  --text-btn: #ffffff;
+  --btn-bg: #3c8067;
+  --price: #3c8067;
+  --btn-bg-hover: #136748;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+  background: var(--background);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  width: 650px;
+  height: 500px;
+  background: var(--bg-card);
+  border-radius: 15px;
+}
+
+.img {
+  border-radius: 15px 0px 0px 15px;
+}
+
+.mobile {
+  display: none;
+}
+
+.card-body {
+  margin: 40px;
+}
+
+.perfume {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+
+.title {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.text {
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.discount {
+  font-family: 'Fraunces', serif;
+  font-size: 2.125rem;
+  font-weight: 700;
+  color: var(--price);
+}
+
+.not-discount {
+  color: var(--text);
+  text-decoration: line-through;
+}
+
+.btn {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  color: var(--text-btn);
+  background: var(--btn-bg);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background: var(--btn-bg-hover);
+}
+
+.cart {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 60px;
+    display: flex;
+  }
+  .card {
+    flex-direction: column;
+    width: 350px;
+    height: 700px;
+    margin-bottom: 60px;
+  }
+  .card-body {
+    margin: 28px;
+  }
+  .img {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    max-width: 100%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .perfume {
+    padding-top: 0px;
+    margin-top: 0px;
+    font-weight: 400;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
